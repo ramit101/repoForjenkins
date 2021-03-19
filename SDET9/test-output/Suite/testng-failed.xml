@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="Test1(failed)" parallel="tests">
+    <classes>
+      <class name="vtiger.Test_CreateProduct">
+        <methods>
+          <include name="closeConnection"/>
+          <include name="logintoAppl"/>
+          <include name="logoutAppl"/>
+          <include name="createProduct_without_active"/>
+          <include name="startConnection"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="startcbt"/>
+          <include name="stopCrossbrowserTesting"/>
+        </methods>
+      </class> <!-- vtiger.Test_CreateProduct -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
