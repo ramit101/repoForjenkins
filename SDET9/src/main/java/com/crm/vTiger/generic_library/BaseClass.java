@@ -1,5 +1,7 @@
 package com.crm.vTiger.generic_library;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -71,12 +73,15 @@ driver.manage().window().maximize();
 webutl.waitForHTMLDOM(driver);
 System.out.println("this is before class");
 
+
 }
                                                                                      /*login in to application @BM will execute himself before starting @Test */
 @BeforeMethod
 public void logintoAppl() throws Throwable{
 	driver.get(flib.getPropertyValue("url"));
 	System.out.println("this is before method");
+	Thread.sleep(3000);
+	
 }
                                                                                      /*logout from application @AM will execute himself after the end of  @Test*/
 @AfterMethod

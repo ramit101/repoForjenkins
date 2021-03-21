@@ -168,11 +168,13 @@ public class WebDriverUtils {
 	 * @author amit ranjan
 	 * @throws IOException 
 	 */
-	public void screenshot(WebDriver driver) throws IOException {
+	public static String screenshot(WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dst = new File("./screenshot/");
+		File dst = new File("./Screenshot/sshot.png");
+		String path = dst.getAbsolutePath();
 		FileUtils.copyFile(src, dst);
+		return path;
 	}
 	
 	
